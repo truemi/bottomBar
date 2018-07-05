@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BottomBar">
+        <!--<attr name="mimgSize" format="dimension"/>-->
+        <attr name="mtextSize" format="dimension"/>
+        <attr name="mTextSelectColor" format="color"/>
+        <attr name="mTextNormalColor" format="color"/>
+        <attr name="mIconSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>
