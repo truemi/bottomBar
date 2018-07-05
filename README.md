@@ -1,5 +1,6 @@
 # bottomBar
-### 当前版本 ` 1.1 `  
+[![](https://jitpack.io/v/truemi/bottomBar.svg)](https://jitpack.io/#truemi/bottomBar)
+  
 app底部导航栏  
 ### 使用:  
 
