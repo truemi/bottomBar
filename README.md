@@ -1,7 +1,7 @@
 # bottomBar
-###当前版本 ` 1.1 `  
+### 当前版本 ` 1.1 `  
 app底部导航栏  
-###使用:  
+### 使用:  
 
 
 - 添加依赖  
@@ -43,15 +43,16 @@ app底部导航栏
                 .create(1);//默认显示第几个界面从0开始
         bottomBar.setOnBottomBarOnClick(this);//设置点击监听  
 
-###自定义属性:
-| 属性        | 值 |  描述  |
+### 自定义属性:  
+
+|  属性        | 值 |  描述  |
 | --------   | -----   | ---- |
 | mTextNormalColor        | #999999      |   标题的默认(未选中状态)颜色   |
 | mTextSelectColor        | #FF0000     |   标题选中状态颜色    |
 | mtextSize     | 10dp     |   标题的文字大小    |
 | mIconSize     | 20dp     |   图片的大小(不设置,使用图片的实际大小)     |
 
-###公开方法:  
+### 公开方法:  
 
 - setOnBottomBarOnClick(this);//设置点击监听
 - showRedPoint(1,0,0);//只有初始化时设置可显示小红点为true时,设置显示才有效
