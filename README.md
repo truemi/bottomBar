@@ -18,7 +18,7 @@ app底部导航栏
 	2.module中的gradle添加依赖:
 
 		dependencies {
-	        implementation 'com.github.truemi:bottomBar:V1.1'
+	        implementation 'com.github.truemi:bottomBar:v1.1'
 		} 
   
 - xml中添加view:  
