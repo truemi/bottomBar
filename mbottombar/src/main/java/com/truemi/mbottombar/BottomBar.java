@@ -258,11 +258,11 @@ public class BottomBar extends LinearLayout {
     }
     /**
      * 显示小红点
-     * @param pointPlace 从左到右第几个小红点,从 1 开始
+     * @param pointPlace 从左到右第几个小红点,从 0 开始
      *
      */
     public void showRed(int pointPlace)  {
-        ImageView imageView = itemImageViews.get(pointPlace);
+        ImageView imageView = itemImageViews.get(pointPlace+1);
         if (imageView!=null) {
             imageView.setVisibility(View.VISIBLE);
         }
@@ -270,11 +270,11 @@ public class BottomBar extends LinearLayout {
 
     /**
      * 隐藏小红点
-     * @param pointPlace 从左到右第几个小红点,从 1 开始
+     * @param pointPlace 从左到右第几个小红点,从 0 开始
      *
      */
     public void hideRed(int pointPlace)  {
-        ImageView imageView = itemImageViews.get(pointPlace);
+        ImageView imageView = itemImageViews.get(pointPlace+1);
         if (imageView!=null) {
             imageView.setVisibility(View.GONE);
         }
@@ -284,7 +284,7 @@ public class BottomBar extends LinearLayout {
      * 设置全部的小红点, setRedPoint(1,0,0) 表示从左到右第一个小红点显示,后面两个不显示
      * @param show 当前位置的小红点是否显示
      */
-    public void setRedPoint(int... show)  {
+    public void showRedPoint(int... show)  {
         for (int i = 0; i < show.length; i++) {
             int point = show[i];
             ImageView imageView = itemImageViews.get(i+1);
@@ -302,9 +302,9 @@ public class BottomBar extends LinearLayout {
 
     /**
      * 把Item添加到bottomBar中
-     * @param defshow 默认显示第几个fragment,从 1 开始
+     * @param defshow 默认显示第几个fragment,从 0 开始
      */
-    public void carete(int defshow) {
+    public void create(int defshow) {
         for (int i = 0; i < items.size(); i++) {
             RelativeLayout relativeLayout = (RelativeLayout) items.get(i);
             if (itemRippleColor!=-1&&Build.VERSION.SDK_INT>=21) {
@@ -315,7 +315,7 @@ public class BottomBar extends LinearLayout {
         }
         RelativeLayout relativeLayout =null;
         try {
-            relativeLayout = items.get(defshow-1);
+            relativeLayout = items.get(defshow);
         }catch (Exception e){
             Log.e("BottomBar","Not founded fragment");
 
@@ -326,12 +326,12 @@ public class BottomBar extends LinearLayout {
 
     /**
      * 公开的外地调用方法,跳转到指定fragment
-     * @param page 为导航栏从左到右Item的位置,最左边Item为1
+     * @param page 为导航栏从左到右Item的位置,最左边Item为0
      */
     public void showSubPage(int page){
         RelativeLayout relativeLayout =null;
         try {
-            relativeLayout = items.get(page-1);
+            relativeLayout = items.get(page);
         }catch (Exception e){
             Log.e("BottomBar","Not founded fragment");
 
